@@ -6,8 +6,8 @@ export default function HolaMundo(){
     }
     return(
         <>
-            <h1>Hola Mundo</h1>
-            
+            <h1>Comp -Hola Mundo</h1>
+        
         </>
     )
 }

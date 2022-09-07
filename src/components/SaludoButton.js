@@ -1,14 +1,17 @@
 import React from "react";
 
-export default function SaludoButton(props){
-
-console.log(props.userInfo.nombre)
-   
-    return(
-            <div>
-                <button onClick={()=> props.saludarFn(props.userInfo.nombre)}>
-                    saludar
-                    </button>
-            </div>
+export default function SaludoButton(props) {
+    const {userInfo,saludarFn} = props
+    const {nombre} = userInfo
+    console.log(props)
+    console.log(userInfo)
+    console.log(nombre)
+    return (
+        <div>
+            <button onClick={
+                () => saludarFn(nombre)}>
+                SALUDAR
+            </button>
+        </div>
     );
 }

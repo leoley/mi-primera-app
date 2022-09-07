@@ -14,14 +14,17 @@ export default function App() {
 
 
   const saludarFN = name => {
-    console.log("Hola" + name +"Lionard")
+    console.log("Hola" + name + "Lionard")
   };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-       
-        <SaludoButton userInfo={user} saludarFn={saludarFN}></SaludoButton>
+
+        <SaludoButton
+                      userInfo={user} 
+                      saludarFn={saludarFN}>
+        </SaludoButton>
 
       </header>
     </div>

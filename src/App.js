@@ -13,8 +13,9 @@ export default function App() {
   }
 
 
-  const saludarFN = name => {
-    console.log("Hola " + name )
+  const saludarFN = (name, edad) => {
+    console.log("Hola " + name + "tiene" + edad + "años")
+    console.log(`Hola ${name}, tiene ${edad}`)
   };
   return (
     <div className="App">
@@ -22,8 +23,8 @@ export default function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <SaludoButton
-                      userInfo={user} 
-                      saludarFn={saludarFN}>
+          userInfo={user}
+          saludarFn={saludarFN}>
         </SaludoButton>
 
       </header>

@@ -7,14 +7,14 @@ export default function App() {
 
 
   const user = {
-    nombre: "Pepe",
+    nombre: "",
     edad: 99,
     color: "azul"
   }
 
 
   const saludarFN = name => {
-    console.log("Hola" + name + "Lionard")
+    console.log("Hola " + name )
   };
   return (
     <div className="App">

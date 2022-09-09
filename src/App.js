@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SaludoButton from './components/SaludoButton';
 
 export default function App() {
   //stateCar => valor del estado
   //setStateCar => Hago un set del valor
   const [stateCar, setStateCar] = useState(false)
+  const [contar, setContar] = useState(0);
 
   const user = {
     nombre: "",
@@ -21,8 +22,13 @@ export default function App() {
 
   const encenderApagar = () => {
     setStateCar(!stateCar)
-  //  setStateCar(prevValue => !prevValue)
+    setContar(contar + 1)
+    //  setStateCar(prevValue => !prevValue)
   }
+//Ejecuta el console.log cuando [contar] cambie el valor
+  useEffect(() => {
+    console.log("Total  " + contar)
+  }, [contar])
 
 
   return (
@@ -36,6 +42,7 @@ export default function App() {
         </SaludoButton>
 
         <h3>El coche esta: {stateCar ? "Encendido" : "Apagado"}</h3>
+        <h4>Clicks: {contar}</h4>
         <button onClick={encenderApagar}>Encender</button>
       </header>
     </div>
